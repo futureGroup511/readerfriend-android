@@ -1,0 +1,159 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.reader.LoginActivity" >
+
+<RelativeLayout
+        android:id="@+id/layout_login_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@drawable/top1_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="登录"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#101010" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_login_topbar"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/login_top_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/tv_uid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18dp"
+                    android:text="账号" />
+
+                <EditText
+                    android:id="@+id/inputNames"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="4dp"
+                    android:layout_toRightOf="@+id/tv_uid"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:maxEms="12"
+                    android:paddingLeft="16dp"
+                    android:singleLine="true"
+                    android:textColor="#45443D" >
+
+                    <requestFocus />
+                </EditText>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@id/inputNames"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#ffcccccc" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp" >
+
+                <TextView
+                    android:id="@+id/in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18dp"
+                    android:text="密码" />
+
+                <EditText
+                    android:id="@+id/inputPassWords"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="4dp"
+                    android:layout_toRightOf="@+id/in"
+                    android:background="@null"
+                    android:inputType="textPassword"
+                    android:paddingLeft="16dp"
+                    android:textColor="#45443D" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@id/inputPassWords"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#ffcccccc"
+                    android:paddingBottom="10dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/loginSucsuss"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="57dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/btn_ok"
+            android:text="登录"
+            android:textColor="#F2F2F2" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+               <TextView
+               android:id="@+id/fogivePassWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="6dp"
+                android:padding="10dp"
+                android:textColor="#8C8EFF"
+                android:text="修改密码"
+                 />
+<!--  
+            <ProgressBar
+                android:id="@+id/proBar"
+                style="@android:style/Widget.ProgressBar.Inverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="5dp"
+                android:visibility="gone" />
+-->
+     
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
