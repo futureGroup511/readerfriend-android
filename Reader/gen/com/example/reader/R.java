@@ -1832,6 +1832,7 @@ containing a value of this type.
         public static final int main=0x7f0f0002;
         public static final int query=0x7f0f0003;
         public static final int result=0x7f0f0004;
+        public static final int show=0x7f0f0005;
     }
     public static final class raw {
         public static final int beep=0x7f060000;

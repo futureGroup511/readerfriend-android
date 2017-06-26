@@ -3,9 +3,7 @@ package com.example.Main.service;
 import android.app.Activity;
 import android.widget.Toast;
 
-public class MyUtil {
-
-
+public class MyUtil{
 	    /**
 	     * œ‘ ætoast
 	     * @param ctx

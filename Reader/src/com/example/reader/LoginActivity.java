@@ -108,46 +108,34 @@ public class LoginActivity extends Activity implements OnClickListener {
 											
 										String result = js.getString("result");
 										System.out.println(result);
-										System.out.println(result.equals("0"));
-										 HttpsService.getInstance().setToken(js.getString("token"));
-										switch (result) {
-											case "0":	
+										System.out.println(result.equals("10004"));
+										
+										
+										if(result.equals("0")) {	
 												 
-												MyUtil.showToast(LoginActivity.this, "登录成功");
-											
+												
+										 HttpsService.getInstance().setToken(js.getString("token"));
 												Intent intent = new Intent(LoginActivity.this,
 														MainActivity.class);
 												startActivity(intent);
 												finish();
 												
-												break;
-											case "10001":
+										}else if(result.equals("10002")){
 												Intent intent2 = new Intent(LoginActivity.this,CheckerActivity.class);											
 												startActivity(intent2);
 												finish();
-												Looper.loop();
-												break;
-											case "10003":
-												Message msg3 = new Message();
-								                msg3.obj = "密码错误";
-								                // 把消息发送到主线程，在主线程里现实Toast
-								                handler.sendMessage(msg3);
 												
+										}else if(result.equals("10003")){
 												
-											case "10004":
-												Message msg4 = new Message();
-								                msg4.obj = "账号不存在";
-								                // 把消息发送到主线程，在主线程里现实Toast
-								                handler.sendMessage(msg4);
-												break;
-											default:
-												break;
-									}
+											MyUtil.showToast(LoginActivity.this, "密码错误");
+									
+										}else if(result.equals("10004")){
+											MyUtil.showToast(LoginActivity.this, "此账号不存在");
+										}
+											
+								
 								}else{
-									Message msg = new Message();
-					                msg.obj = "没有连接到服务器";
-					                // 把消息发送到主线程，在主线程里现实Toast
-					                handler.sendMessage(msg);
+									MyUtil.showToast(LoginActivity.this, "没有连接服务器");
 								}
 							}
 							catch(Exception e){
